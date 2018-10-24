@@ -54,7 +54,6 @@ function getTasks() {
 
 //add task
 function addTask(e) {
-    e.preventDefault();
     if(taskInput.value === "") {
         alert('add a task');
         return false;
@@ -65,7 +64,7 @@ function addTask(e) {
     //Add class
     li.className = 'collection-item';
     //Create text node and append to li
-    li.appendChild(document.createTextNode(task));
+    li.appendChild(document.createTextNode(taskInput.value));
     // Create new link element
     const link = document.createElement('a');
     // Add class
